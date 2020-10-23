@@ -10,11 +10,11 @@ const formSearch = document.querySelector('.form-search'),
 // db/cities.json' - локальная БД городов
 
 //онлайн база городов, прокси, ключ АПИ и БД по календарю цен
-const CITY_API = 'https://api.travelpayouts.com/data/ru/cities.json',
+const CITY_API = 'http://api.travelpayouts.com/data/ru/cities.json',
 	PROXY = 'https://cors-anywhere.herokuapp.com/',
 	API_KEY = '5d2e3c92f5cbb5b20d19b432ed48fb95',
 	// Получение минимальных цен на перелёт для указанных даты вылета и городов вылета и назначения
-	CALENDAR = 'https://min-prices.aviasales.ru/calendar_preload',
+	CALENDAR = 'http://min-prices.aviasales.ru/calendar_preload',
 	MAX_COUNT = 5  // количество карточек самых дешевых билетов
 
 
@@ -140,7 +140,7 @@ const createCard = (data) => {
 			<div class="ticket__wrapper">
 				<div class="left-side">
 					<a href="${getLinkAviasales(data)}" target="_blank" class="button button__buy">Купить
-						за ${data.value}₽</a>
+						за ${data.value}₽</a>
 				</div>
 				<div class="right-side">
 					<div class="block-left">
@@ -149,7 +149,6 @@ const createCard = (data) => {
 						</div>
 						<div class="date">${getDate(data.depart_date)}</div>
 					</div>
-
 					<div class="block-right">
 						<div class="changes">${getChanges(data.number_of_changes)}</div>
 						<div class="city__to">Город назначения:
