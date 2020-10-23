@@ -10,7 +10,7 @@ const formSearch = document.querySelector('.form-search'),
 // db/cities.json' - локальная БД городов
 
 //онлайн база городов, прокси, ключ АПИ и БД по календарю цен
-const CITY_API = 'http://api.travelpayouts.com/data/ru/cities.json',
+const CITY_API = 'https://api.travelpayouts.com/data/ru/cities.json',
 	PROXY = 'https://cors-anywhere.herokuapp.com/',
 	API_KEY = '5d2e3c92f5cbb5b20d19b432ed48fb95',
 	// Получение минимальных цен на перелёт для указанных даты вылета и городов вылета и назначения
